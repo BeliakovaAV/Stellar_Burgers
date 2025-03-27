@@ -29,7 +29,6 @@ class Locators:
     CONSTRUCTOR = [By.XPATH, "//p[text()='Конструктор']"] # кнопка Конструктор
     # - по логотипу Stellar Burgers
     SB_LOGO = [By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']"] # логотип Stellar Burgers
-
     # Выход из аккаунта
     EXIT_BUTTON = [By.XPATH, "//button[text()='Выход']"] # кнопка Выход
 
