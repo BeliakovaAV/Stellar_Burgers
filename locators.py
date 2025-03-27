@@ -34,8 +34,11 @@ class Locators:
 
     # Раздел Конструктор
     BUNS = [By.XPATH, "//span[text()='Булки']"] # раздел Булки
+    BUNS_TEXT = [By.XPATH, "//h2[text()='Булки']"] # название раздела Булки
     SAUSES = [By.XPATH, "//span[text()='Соусы']"] # раздел Соусы
+    SAUSES_TEXT = [By.XPATH, "//h2[text()='Соусы']"]  # название раздела Соусы
     FILLINGS = [By.XPATH, "//span[text()='Начинки']"] # раздел Начинки
+    FILLINGS_TEXT = [By.XPATH, "//h2[text()='Начинки']"]  # название раздела Начинки
 
 
 

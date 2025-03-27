@@ -21,6 +21,8 @@ class TestRegistrationWithNewCredentials:
         # assert
         assert driver.current_url == main_site + 'register'
 
+        driver.quit()
+
     def test_registration_with_wrong_password(self, driver):
         # arrange
         name, email, password = generate_registration_data()
@@ -34,3 +36,5 @@ class TestRegistrationWithNewCredentials:
         error_text = WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.ERROR_POPUP)).text
         # assert
         assert error_text == 'Некорректный пароль'
+
+        driver.quit()
