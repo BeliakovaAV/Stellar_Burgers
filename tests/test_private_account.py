@@ -12,7 +12,7 @@ class TestPrivateAccount:
         driver.find_element(*Locators.PERSONAL_ACC).click()
         assert WebDriverWait(driver, 5).until(EC.url_contains('account/profile'))
 
-        driver.quit()
+
 
     def test_from_private_acc_to_constructor(self, login):
         driver = login
@@ -21,7 +21,7 @@ class TestPrivateAccount:
         driver.find_element(*Locators.CONSTRUCTOR).click()
         assert driver.current_url == main_site
 
-        driver.quit()
+
 
     def test_from_private_acc_click_on_logo(self, login):
         driver = login
@@ -30,7 +30,7 @@ class TestPrivateAccount:
         driver.find_element(*Locators.SB_LOGO).click()
         assert driver.current_url == main_site
 
-        driver.quit()
+
 
     def test_exit_from_private_acc(self, login):
         driver = login
@@ -39,4 +39,3 @@ class TestPrivateAccount:
         driver.find_element(*Locators.EXIT_BUTTON).click()
         assert WebDriverWait(driver, 5).until(EC.url_contains('login'))
 
-        driver.quit()

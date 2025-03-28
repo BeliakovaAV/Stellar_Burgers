@@ -10,18 +10,18 @@ class TestWaysToEnterTheService:
         driver.find_element(*Locators.ACC_EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.ACC_PASSWORD).send_keys(Credentials.password)
         driver.find_element(*Locators.ENTER).click()
-        assert driver.current_url == main_site + 'login'
+        assert driver.current_url == login_page
 
-        driver.quit()
+
 
     def test_via_private_acc_button(self, driver):
         driver.find_element(*Locators.PERSONAL_ACC).click()
         driver.find_element(*Locators.ACC_EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.ACC_PASSWORD).send_keys(Credentials.password)
         driver.find_element(*Locators.ENTER).click()
-        assert driver.current_url == main_site + 'login'
+        assert driver.current_url == login_page
 
-        driver.quit()
+
 
     def test_via_reg_page(self, driver):
         driver.find_element(*Locators.ACC_ENTRANCE).click()
@@ -30,9 +30,9 @@ class TestWaysToEnterTheService:
         driver.find_element(*Locators.ACC_EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.ACC_PASSWORD).send_keys(Credentials.password)
         driver.find_element(*Locators.ENTER).click()
-        assert driver.current_url == main_site + 'login'
+        assert driver.current_url == login_page
 
-        driver.quit()
+
 
     def test_via_password_reset_page_button(self, driver):
         driver.find_element(*Locators.ACC_ENTRANCE).click()
@@ -41,6 +41,6 @@ class TestWaysToEnterTheService:
         driver.find_element(*Locators.ACC_EMAIL).send_keys(Credentials.email)
         driver.find_element(*Locators.ACC_PASSWORD).send_keys(Credentials.password)
         driver.find_element(*Locators.ENTER).click()
-        assert driver.current_url == main_site + 'login'
+        assert driver.current_url == login_page
 
-        driver.quit()
+
